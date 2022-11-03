@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/GreenGard/static/css/main.d90f2c01.css",
+    "main.js": "/GreenGard/static/js/main.abb53095.js",
+    "static/js/787.5ba7ae44.chunk.js": "/GreenGard/static/js/787.5ba7ae44.chunk.js",
+    "static/media/inicio.fondo.jpg": "/GreenGard/static/media/inicio.fondo.c4ebd96f6d20042f7302.jpg",
+    "static/media/logo.jpg": "/GreenGard/static/media/logo.0b2bf756e15c3da55abd.jpg",
+    "index.html": "/GreenGard/index.html",
+    "main.d90f2c01.css.map": "/GreenGard/static/css/main.d90f2c01.css.map",
+    "main.abb53095.js.map": "/GreenGard/static/js/main.abb53095.js.map",
+    "787.5ba7ae44.chunk.js.map": "/GreenGard/static/js/787.5ba7ae44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d90f2c01.css",
+    "static/js/main.abb53095.js"
+  ]
+}
