@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/AntonioGarrido19/GreenGard/static/css/main.649891f8.css",
-    "main.js": "/AntonioGarrido19/GreenGard/static/js/main.5cceb6da.js",
-    "static/js/787.5ba7ae44.chunk.js": "/AntonioGarrido19/GreenGard/static/js/787.5ba7ae44.chunk.js",
-    "static/media/inicio.fondo.jpg": "/AntonioGarrido19/GreenGard/static/media/inicio.fondo.c4ebd96f6d20042f7302.jpg",
-    "static/media/logo.jpg": "/AntonioGarrido19/GreenGard/static/media/logo.0b2bf756e15c3da55abd.jpg",
-    "index.html": "/AntonioGarrido19/GreenGard/index.html",
-    "main.649891f8.css.map": "/AntonioGarrido19/GreenGard/static/css/main.649891f8.css.map",
-    "main.5cceb6da.js.map": "/AntonioGarrido19/GreenGard/static/js/main.5cceb6da.js.map",
-    "787.5ba7ae44.chunk.js.map": "/AntonioGarrido19/GreenGard/static/js/787.5ba7ae44.chunk.js.map"
+    "main.css": "/GreenGard/static/css/main.d90f2c01.css",
+    "main.js": "/GreenGard/static/js/main.abb53095.js",
+    "static/js/787.5ba7ae44.chunk.js": "/GreenGard/static/js/787.5ba7ae44.chunk.js",
+    "static/media/inicio.fondo.jpg": "/GreenGard/static/media/inicio.fondo.c4ebd96f6d20042f7302.jpg",
+    "static/media/logo.jpg": "/GreenGard/static/media/logo.0b2bf756e15c3da55abd.jpg",
+    "index.html": "/GreenGard/index.html",
+    "main.d90f2c01.css.map": "/GreenGard/static/css/main.d90f2c01.css.map",
+    "main.abb53095.js.map": "/GreenGard/static/js/main.abb53095.js.map",
+    "787.5ba7ae44.chunk.js.map": "/GreenGard/static/js/787.5ba7ae44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.649891f8.css",
-    "static/js/main.5cceb6da.js"
+    "static/css/main.d90f2c01.css",
+    "static/js/main.abb53095.js"
   ]
 }
