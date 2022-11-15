@@ -1,7 +1,8 @@
-import React from 'react'
+import { Form, Link, NavLink } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 import logo from '../../assets/logo.jpg'
+
 
 const NavBar = () => {
     return (
@@ -11,21 +12,23 @@ const NavBar = () => {
             <img className='menu-navbar__img' src={logo} alt='logo' />
 
             <ul className='menu-items'>
-                <li>
-                    <a href="" className='menu-list'>Flores</a>
+            <li>
+                    <NavLink to="/" className='menu-list'>Todos los productos</NavLink>
                 </li>
                 <li>
-                    <a href="" className='menu-list'>Interior</a>
+                    <NavLink to="/category/flores" className='menu-list'>Flores</NavLink>
                 </li>
                 <li>
-                    <a href="" className='menu-list'>Exterior</a>
+                    <NavLink to="/category/interior" className='menu-list'>Interior</NavLink>
                 </li>
                 <li>
-                    <a href="" className='menu-list'>Contacto</a>
+                    <NavLink to="/category/exterior" className='menu-list'>Exterior</NavLink>
                 </li>
             </ul>
 
-            <CartWidget />
+           <div> 
+            <Link to="/cart"> <CartWidget/> </Link>
+            </div>
         </div>
     )
 }

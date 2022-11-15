@@ -15,3 +15,9 @@
     color: white;
 }
 
+.item__list--container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+}
+
