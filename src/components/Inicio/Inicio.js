@@ -1,6 +1,5 @@
 
 import './Inicio.css'
-import InicioFondo from '../../assets/inicio.fondo.jpg'
 import { data } from '../../data/data';
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
@@ -14,10 +13,10 @@ const Inicio = (props) => {
   const getProducts = new Promise((res, rej) => {
     setTimeout(() => {
       if (categoryName) {
-        const filteredData = data.filter((producto) => {
+        const filtereddata = data.filter((producto) => {
           return producto.category === categoryName
         });
-        res(filteredData)
+        res(filtereddata)
       } else {
         res(data);
       }

@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemList from './components/ItemList/ItemList';
 import Inicio from './components/Inicio/Inicio';
 import NavBar from './components/NavBar/NavBar';
-import ItemDetail from './components/ItemDetail/ItemDetail'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import CartWidget from './components/CartWidget/CartWidget';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
    <Routes>
     <Route path="/" element={<Inicio />} />
    <Route path="/category/:categoryName" element={<Inicio />} />
-   <Route path="detail/:id" element={<ItemDetail />} />
+   <Route path="/item/:id" element={<ItemDetailContainer />} />
    <Route path="cart" element={<CartWidget />} />
    </Routes>
    </BrowserRouter>

@@ -6,6 +6,9 @@ const CartWidget = () => {
   return (
     <div className='menu_navbar__cart'>
         <img className='menu-navbar__cart__img' src={cart} alt='cart-widget'/>
+        <div>
+          <p>0</p>
+        </div>
     </div>
   )
 }
