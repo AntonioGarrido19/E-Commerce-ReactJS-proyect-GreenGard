@@ -9,7 +9,6 @@ const {img, title, price} = product;
        <img src={process.env.PUBLIC_URL + `${img}`} />
          <h4>{title}</h4>
          <p>Precio: ${price}</p>
-
        <Link to={`item/${product.id}`}> 
        <button>Ver mas</button> 
        </Link>

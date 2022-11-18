@@ -4,16 +4,9 @@
     background-size: cover;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/inicio.fondo.jpg);
-}
-
-
-.message {
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
     padding-top: 100px;
-    color: white;
 }
+
 
 .item__list--container {
     display: flex;
