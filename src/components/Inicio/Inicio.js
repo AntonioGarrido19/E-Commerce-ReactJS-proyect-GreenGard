@@ -1,42 +1,59 @@
 
 import './Inicio.css'
-import { data } from '../../data/data';
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
-import { resolvePath, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
-
-const Inicio = (props) => {
+const Inicio = () => {
   const [items, setItems] = useState([]);
   const { categoryName } = useParams();
 
-  const getProducts = new Promise((res, rej) => {
-    setTimeout(() => {
-      if (categoryName) {
-        const filtereddata = data.filter((producto) => {
-          return producto.category === categoryName
+  const getProducts = () => {
+    const db = getFirestore();
+    const querySnapshot = collection(db, 'items');
+    if (categoryName) {
+      const queryFilter = query(querySnapshot, where('categoryId', '==', categoryName))
+      getDocs(queryFilter).then((response) => {
+        const data = response.docs.map((item) => {
+          console.log(item.data())
+          return { id: item.id, ...item.data() }
         });
-        res(filtereddata)
-      } else {
-        res(data);
-      }
-    }, 1000);
-  })
+        console.log(data);
+        setItems(data);
+      })
+        .catch((error) => { console.log(error) })
+    } else {
 
+      getDocs(querySnapshot).then((response) => {
+        const data = response.docs.map((item) => {
+          console.log(item.data())
+          return { id: item.id, ...item.data() }
+        });
+        setItems(data);
+      })
+        .catch((error) => { console.log(error) })
+    };
+  }
   useEffect(() => {
-    getProducts
-      .then((res) => setItems(res))
-      .catch((error) => console.log(error));
-}, [categoryName]);
+    getProducts();
+  }, [categoryName]);
 
-return (
-  <div className='message-greeting-container'>
-    <div className='item__list--container'>
-      <ItemList products={items} />
+  //   useEffect(() => {
+  //     getProducts
+  //       .then((res) => setItems(res))
+  //       .catch((error) => console.log(error));
+  // }, [categoryName]);
+
+  return (
+    <div className='message-greeting-container'>
+      <div className='item__list--container'>
+        <ItemList products={items} />
+      </div>
     </div>
-  </div>
-);
+  );
 };
 
 
 export default Inicio
+export function data() {};
