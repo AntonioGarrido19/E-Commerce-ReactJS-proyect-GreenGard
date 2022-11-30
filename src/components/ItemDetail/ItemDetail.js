@@ -4,12 +4,13 @@ import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({ productSelected }) => {
   console.log(productSelected);
-  const { img, title, price, care, info } = productSelected;
+  const { imageId, title, price, care, info } = productSelected;
   const {count, setCount} = useState (0);
   return (
     <div className='item__detail__container'>
 
-      <img src={process.env.PUBLIC_URL + `${img}`} />
+      <img alt={productSelected.title} src={`images/${productSelected.imageId}`}/>
+      <img alt={productSelected.title} src={`images/${imageId}`}/>
       <div className='item__detail__container--info'>
         <h4>{title}</h4>
         <p>Cuidados: {care}</p>

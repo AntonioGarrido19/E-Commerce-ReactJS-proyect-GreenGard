@@ -1,35 +1,35 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { data } from "../Inicio/Inicio"
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
-
-  
   const [productSelected, setProductSelected] = useState();
-  const {id} = useParams();
+  const { id } = useParams();
 
-  const getProduct = () =>{
-    const productFilter = data.filter((producto)=>{
-      console.log(data)
-      return producto.id == id
-    })
-    setProductSelected(...productFilter)
-  }
+  const getProduct = () => {
+    const db = getFirestore();
+    const query = doc(db, 'items', id);
+    getDoc(query)
+      .then ((response) => {
+  console.log(response.data());
+  setProductSelected({ id: response.id, ...response.data() });
+})
+   .catch ((error) => console.log(error));
+  };
 
-  
 
-  useEffect(()=>{
-    getProduct();
-  }, [id])
+useEffect(() => {
+  getProduct();
+}, [id])
 
-  return (
-    <>
+return (
+  <>
     {productSelected &&
-      <ItemDetail productSelected={productSelected}/>
+      <ItemDetail productSelected={productSelected} />
     }
-    </>
-  )
+  </>
+)
 }
 
 export default ItemDetailContainer
