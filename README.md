@@ -1,3 +1,11 @@
+### Información del proyecto.
+
+This proyect it´s about an online store of a nursery called GreenGard, the idea is to be able of buying any product offered by the place, generating a shopping order wich goes into the FireStore base.
+
+The proyect it´s connected with FireBase from FireStore to get information and to deliver the generated orders. The development of the site was made using ReactJS library, React-Bootstrap and Reactstrap.
+
+Este proyecto fue realizado utilizando la librería de ReactJS junto con React-Bootstrap y Reactstrap, conectada con FireBase.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
