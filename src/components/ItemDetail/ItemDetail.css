@@ -1,4 +1,4 @@
-.item__detail__container{
+.item__detail__container {
     width: 100%;
     height: 150vh;
     background-size: cover;
@@ -6,45 +6,47 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/inicio.fondo.jpg);
     padding-top: 100px;
     display: flex;
+    color: white;
 }
 
 
 .item__detail__container--info {
-margin-right: 17.5%;
-background-color: white;
-text-align: center;
-height: 350px;
-width: 40%;
+    margin-right: 17.5%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    height: 440px;
+    width: 25%;
 }
 
 .item__detail__container--info p {
-    padding-top: 10px;
+    padding-top: 5px;
+    margin-bottom: 5px;
 }
 
 .item__detail__container--info h4 {
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .item__detail__container img {
-height: 350px;
-width: 25%;
-margin-left: 17.5%;
+    height: 440px;
+    width: 40%;
+    margin-left: 17.5%;
 }
 
 .item__detail__container--button {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.item__detail__container--button button {
-    margin-inline: 10px;
-    margin-top: 20px;
-  
+.item__detail__container--info button {
+    padding: 3px;
 }
 
 .item__detail__container--button p {
-    margin-top: 10px;
-   
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
 }

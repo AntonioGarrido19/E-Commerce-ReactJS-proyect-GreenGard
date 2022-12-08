@@ -1,14 +1,16 @@
 
 import './Inicio.css'
 import { useState, useEffect } from 'react';
-import ItemList from '../ItemList/ItemList';
+import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
+
 const Inicio = () => {
+ 
   const [items, setItems] = useState([]);
   const { categoryName } = useParams();
-
+  
   const getProducts = () => {
     const db = getFirestore();
     const querySnapshot = collection(db, 'items');

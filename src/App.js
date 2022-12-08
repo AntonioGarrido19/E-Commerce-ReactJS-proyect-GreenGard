@@ -1,15 +1,15 @@
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Inicio from './components/Inicio/Inicio';
+import Inicio from './pages/Inicio/Inicio';
 import NavBar from './components/NavBar/NavBar';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import CartWidget from './components/CartWidget/CartWidget';
-import { CartContext } from './components/Context/CartContext'
+import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer'
+import Cart from './pages/Cart/Cart';
+import CartProvider from './Context/CartProvider';
 
 function App() {
   return (
-  
+    <CartProvider >
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -17,10 +17,10 @@ function App() {
           <Route path="/category/:categoryName" element={<Inicio />} />
           <Route path="/category/:categoryName/item/:id" element={<ItemDetailContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="cart" element={<CartWidget />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
-    
+      </CartProvider>
   );
 }
 
