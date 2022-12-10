@@ -1,4 +1,4 @@
-### Información del proyecto.
+### About the proyect.
 
 This proyect it´s about an online store of a nursery called GreenGard, the idea is to be able of buying any product offered by the place, generating a shopping order wich goes into the FireStore base.
 
