@@ -4,11 +4,14 @@ import { cartContext } from "../../Context/CartProvider";
 import { collection, addDoc, getFirestore, doc, updateDoc } from 'firebase/firestore';
 import moment from 'moment'
 
+
+
+
 const Cart = () => {
     const { cart, removeItem, clear } = useContext(cartContext);
     const [total, setTotal] = useState(0);
     console.log(cart)
-    const [ formValues, setFormValues ] = useState({
+    const [formValues, setFormValues] = useState({
         name: '',
         phone: '',
         email: '',
@@ -35,7 +38,7 @@ const Cart = () => {
         };
         addDoc(query, newOrder)
             .then((response) => {
-                alert(`Orden creada con el id ${response.id}`)
+                alert(`Orden creada con el id ${response.id}. Siga las instrucciones enviadas a su correo electrónico para realizar el pago`)
                 return (response)
             })
             .then((res) => {
@@ -68,10 +71,10 @@ const Cart = () => {
                     <img alt={product.title} src={`/images/${product.imageId}`} />
 
                     <div className='cart__container--products--info'>
-                    <h3>{product.title}</h3>
-                    <h4>${product.price}</h4>
-                    <h4>Cantidad: {product.quantity}</h4>
-                    <button onClick={() => removeItem (product.id)}>Quitar producto</button>
+                        <h3>{product.title}</h3>
+                        <h4>${product.price}</h4>
+                        <h4>Cantidad: {product.quantity}</h4>
+                        <button onClick={() => removeItem(product.id)}>Quitar producto</button>
                     </div>
 
                 </div>
@@ -84,10 +87,14 @@ const Cart = () => {
                     <input name='phone' type='text' placeholder='Teléfono' value={formValues.phone} onChange={handleInputChange} />
                     <input name='email' type='text' placeholder='E-mail' value={formValues.email} onChange={handleInputChange} />
                 </div>
-                <h3>Total de la orden: {total}</h3>
-                <button onClick={createOrder}>Crear Orden</button>
+                <h3>Total de la orden: ${total}</h3>
+                <button onClick={() => {
+                    createOrder();
+                    clear();
+                }}>Crear Orden</button>
+
                 <button onClick={() => clear()}>Limpiar carrito</button>
-                
+
             </div>
         </div>
     )
