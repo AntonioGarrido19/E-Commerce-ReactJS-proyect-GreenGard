@@ -39,7 +39,7 @@ const Inicio = () => {
   }
   useEffect(() => {
     getProducts();
-  }, [categoryName]);
+  }, [categoryName, getProducts]);
 
   //   useEffect(() => {
   //     getProducts

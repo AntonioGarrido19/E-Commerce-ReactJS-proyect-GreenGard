@@ -7,7 +7,7 @@ const ItemDetail = ({ productSelected }) => {
   console.log(productSelected);
   const { imageId, title, price, care, info } = productSelected;
   const [count, setCount] = useState (1);
-  const {cart, addToCart} = useContext(cartContext);
+  const {addToCart} = useContext(cartContext);
 
   return (
     <div className='item__detail__container'>

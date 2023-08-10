@@ -4,9 +4,6 @@ import { cartContext } from "../../Context/CartProvider";
 import { collection, addDoc, getFirestore, doc, updateDoc } from 'firebase/firestore';
 import moment from 'moment'
 
-
-
-
 const Cart = () => {
     const { cart, removeItem, clear } = useContext(cartContext);
     const [total, setTotal] = useState(0);
@@ -54,7 +51,7 @@ const Cart = () => {
 
     useEffect(() => {
         getTotalPrice();
-    }, [cart])
+    }, [cart, getTotalPrice])
 
     const handleInputChange = (event) => {
         console.log(event.target.name)
